@@ -3,7 +3,7 @@
   --bg-color: #0d1117;
   --secondary-bg: #161b22;
   --accent-gold: #e3b341;
-  --accent-blue: #70a0af;
+  --accent-blue: #8B939C;
   --text-color: #fffbff;
   --heading-font: "BBH Bartle", sans-serif;
   --body-font: "Nunito Sans", sans-serif;
@@ -36,7 +36,8 @@ h4 {
   justify-content: flex-start;
   align-content: flex-start;
   align-items: center;
-  width: 350px;
+  width: 450px;
+  height: fit-content;
   position: sticky;
   top: 20px;
   border: 2px solid var(--accent-blue);
@@ -145,4 +146,34 @@ main section h2 {
   border-bottom: 1px solid rgba(112, 160, 175, 0.2);
   display: inline-block;
   padding-bottom: 5px;
+}
+main #about-me p:last-of-type {
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(112, 160, 175, 0.4);
+  padding-bottom: 15px;
+}
+main #about-me p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--text-color);
+}
+main #my-video {
+  border-bottom: 1px solid rgba(112, 160, 175, 0.4);
+  padding-bottom: 15px;
+}
+main #my-video video {
+  object-fit: cover;
+  width: 95%;
+  max-width: 800px;
+  height: auto;
+  margin: auto;
+  border:  1px solid var(--accent-gold);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(227, 179, 65, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main #my-video video:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 0 30px rgba(227, 179, 65, 0.5);
 }
