@@ -1,0 +1,31 @@
+/* 1. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Style Variables */
+:root {
+  --bg-color: #0d1117;
+  --secondary-bg: #161b22;
+  --accent-gold: #e3b341;
+  --accent-blue: #70a0af;
+  --text-color: #fffbff;
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Nunito Sans', sans-serif;
+}
+
+/* 3. Main Body Setup */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+/* 4. Typography */
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: var(--accent-gold);
+}
