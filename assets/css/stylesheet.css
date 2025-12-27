@@ -22,7 +22,14 @@ body {
   color: var(--text-color);
   font-family: var(--body-font);
   line-height: 1.6;
-  display: flex;
+  display: grid;
+  grid-template-areas: "aside main"
+                       "aside footer";
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;  
+  gap: 30px;
+  padding: 20px;                 
 }
 h1,
 h2,
@@ -38,17 +45,17 @@ h4 {
   justify-content: flex-start;
   align-content: flex-start;
   align-items: center;
-  width: 450px;
+  width: 100%;
   height: fit-content;
   position: sticky;
   top: 20px;
   border: 2px solid var(--accent-blue);
   border-radius: 8px;
-  left: 120px;
   background-color: var(--secondary-bg);
   overflow: hidden;
   padding-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  grid-area: aside;
 }
 #contact-me img {
   width: 100%;
@@ -89,6 +96,7 @@ h4 {
 #contact-me ul li a:hover {
   color: var(--accent-gold);
 }
+/* main*/
 main {
   border: 1px solid var(--accent-blue);
   border-radius: 12px;
@@ -98,16 +106,15 @@ main {
   gap: 60px;
   top: 20px;
   padding: 60px 40px 40px;
-  width: calc(100% - 500px);
+  width: 100%;
   max-width: 1000px;
   height: auto;
   position: relative;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 150px;
+  margin: 0;
   top: 20px;
   background-color: var(--secondary-bg);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  grid-area: main;
 }
 main header nav {
   position: absolute;
@@ -243,4 +250,54 @@ main #my-video video:hover {
     transform: translateY(-8px);
     border-color: var(--accent-gold);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+footer {
+  border: 1px solid var(--accent-blue);
+  border-radius: 12px;
+  margin: 0;
+  padding: 20px;
+  max-width: 1000px;
+  text-align: center;
+  grid-area: footer;
+  font-family: var(--accent-gold);
+  background-color: var(--secondary-bg);
+}
+@media screen and (max-width: 578px) {
+  body {
+    grid-template-areas: "main"
+                         "aside"
+                         "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding: 10px;
+  }
+  .ambitions-container {
+    display: grid;
+    grid-template-areas: "web"
+                         "mobile"
+                         "python";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 25px;
+  }
+  .web-development {
+    grid-area: web;
+  }
+  .mobile-apps {
+    grid-area: mobile;
+  }
+  .python-ai {
+    grid-area: python;
+  }
+  #contact-me {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer {
+    font-size: 0.85rem;
+    padding: 15px;
+  }
 }
