@@ -302,4 +302,7 @@ footer {
     font-size: 0.85rem;
     padding: 15px;
   }
+  #about-me h2 {
+    font-size: 1.3rem;
+  }
 }
