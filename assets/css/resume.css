@@ -10,7 +10,7 @@
   --bg-color: #0d1117;
   --secondary-bg: #161b22;
   --accent-gold: #e3b341;
-  --accent-blue: #8B939C;
+  --accent-blue: #8b939c;
   --text-color: #fffbff;
   --heading-font: "Montserrat", sans-serif;
   --body-font: "Nunito Sans", sans-serif;
@@ -52,14 +52,14 @@ h3 {
   margin-left: 20px;
 }
 #resume ol li::before {
-    content: "";
-    position: absolute;
-    left: -27px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background: var(--accent-gold);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-gold);
+  border-radius: 50%;
 }
 #resume ol li span {
   display: inline-block;
