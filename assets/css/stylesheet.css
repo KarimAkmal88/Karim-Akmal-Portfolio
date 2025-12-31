@@ -265,7 +265,7 @@ footer {
   background-color: var(--secondary-bg);
   font-size: 0.85rem;
 }
-@media screen and (max-width: 578px) and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   body {
     grid-template-areas:
       "main"
@@ -308,6 +308,38 @@ footer {
   #about-me h2 {
     font-size: 1.3rem;
   }
+  main header nav {
+  position: absolute;
+  display: flex;
+  bottom: auto;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: max-content;
+  padding: 5px 10px;
+  border: 1px solid var(--accent-blue);
+  background-color: var(--secondary-bg);
+  border-radius: 0 12px 12px 12px;
+  z-index: 10;
+}
+main header nav ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 5px;
+}
+main header nav ul li {
+  padding: 5px;
+  margin: 5px;
+}
+main header nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
 }
 .active {
   color: var(--accent-gold);
