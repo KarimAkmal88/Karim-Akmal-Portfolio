@@ -51,6 +51,7 @@ h3 {
   display: flex;
   flex-flow: column wrap;
   gap: 30px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .project-card h3 {
@@ -127,6 +128,7 @@ h3 {
     display: flex;
     flex-flow: column wrap;
     gap: 25px;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
 }
